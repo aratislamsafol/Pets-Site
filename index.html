@@ -15,8 +15,8 @@
     <title>Pets Site</title>
 </head>
 <body class="regular-font max-w-[1600px] mx-auto">
-    <header class="px-2 md:px-8 lg:px-12 mt-3 md:mt-6 lg:mt-12 ">
-        <nav class="grid grid-cols-2 md:grid-cols-3 justify-between items-center">
+    <header class="">
+        <nav class="px-2 md:px-8 lg:px-12 my-3 md:my-6 lg:my-12 grid grid-cols-2 md:grid-cols-3 justify-between items-center">
             <!-- logo -->
              <div class="flex items-center gap-1">
                 <img src="./src/assets/images/logo.webp" class="w-3 h-3" alt="logo image">
@@ -70,7 +70,24 @@
             </button>
         </nav>
     </header>
-    <main></main>
+    <main class="mt-5 md:mt-0">
+        <!-- banner -->
+        <section class="px-2 md:px-8 lg:px-12 text-center flex flex-col-reverse md:flex-col items-center">
+            <!-- text section -->
+            <div class="max-w-[752px] mx-auto flex flex-col items-center gap-3 md:gap-5 lg:gap_6">
+                <p class="font-bold text-stone-400 text-sm md:text-xl lg:text-2xl">Bringing Families Together ❤️‍🔥 </p>
+                <h2 class="text-3xl md:text-5xl lg:text-7xl font-bold">Your Path to Adoption Starts Here</h2>
+                <p class="text-xs md:text-sm lg:text-base text-stone-600">It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a.</p>
+                <button type="button" class="text-md md:text-xl font-bold text-white bg-[#0E7A81] px-4 py-3 md:px-8 md:py-4 rounded-xl hover:bg-[#33575a] w-fit">View More</button>
+            </div>
+            <!-- img section -->
+             <div class="mt-4 md:mt-8 lg:mt-12">
+                <img src="src/assets/images/pet.webp" class="w-full" alt="banner images">
+             </div>
+        </section>
+        
+        <!--  -->
+    </main>
     <footer></footer>
     
     <script src="src/assets/js/main.js"></script>
