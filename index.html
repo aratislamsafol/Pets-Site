@@ -1,28 +1,33 @@
 <!DOCTYPE html>
 <html lang="en" data-theme="light">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!-- google font -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap" rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap"
+        rel="stylesheet">
     <!-- DaisyUI & Tailwind CSS -->
     <link href="https://cdn.jsdelivr.net/npm/daisyui@5" rel="stylesheet" type="text/css" />
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
     <!-- custom css -->
-     <link rel="stylesheet" href="src/input.css">
+    <link rel="stylesheet" href="src/input.css">
     <title>Pets Site</title>
 </head>
+
 <body class="regular-font max-w-[1600px] mx-auto">
     <header class="">
-        <nav class="px-2 md:px-8 lg:px-12 my-3 md:my-6 lg:my-12 grid grid-cols-2 md:grid-cols-3 justify-between items-center">
+        <nav
+            class="px-2 md:px-8 lg:px-12 my-3 md:my-6 lg:my-12 grid grid-cols-2 md:grid-cols-3 justify-between items-center">
             <!-- logo -->
-             <div class="flex items-center gap-1">
+            <div class="flex items-center gap-1">
                 <img src="./src/assets/images/logo.webp" class="w-3 h-3" alt="logo image">
                 <span class="md:text-lg font-bold">Peddy</span>
-             </div>
-              <!-- Hamburger Button -->
+            </div>
+            <!-- Hamburger Button -->
             <button id="menu-btn" class="md:hidden flex flex-col gap-[4px] z-50 items-end cursor-pointer">
                 <span class="line block w-4 h-[2px] bg-stone-400 transition-all duration-300 origin-top-left"></span>
                 <span class="line block w-4 h-[2px] bg-stone-400 transition-all duration-300"></span>
@@ -30,31 +35,37 @@
             </button>
 
             <!-- menuBar -->
-            <div id="menuBar" class="col-span-2 md:col-span-1 bg-stone-100 md:bg-transparent hidden md:block ease-in-out">
+            <div id="menuBar"
+                class="col-span-2 md:col-span-1 bg-stone-100 md:bg-transparent hidden md:block ease-in-out">
                 <ul class="flex flex-col md:flex-row justify-center gap-1 md:gap-4">
                     <li class="w-full md:w-auto">
-                        <a href="index.html" class="block text-xs md:text-sm lg:text-base text-stone-600 font-normal hover:text-white cursor-pointer transition-all  hover:bg-green-600 md:hover:bg-transparent md:hover:text-stone-900 w-full px-4 py-2">
+                        <a href="index.html"
+                            class="block text-xs md:text-sm lg:text-base text-stone-600 font-normal hover:text-white cursor-pointer transition-all  hover:bg-green-600 md:hover:bg-transparent md:hover:text-stone-900 w-full px-4 py-2">
                             Home
                         </a>
                     </li>
-                    
+
                     <li class="w-full md:w-auto">
-                        <a href="index.html" class="block text-xs md:text-sm lg:text-base text-stone-600 font-normal hover:text-white cursor-pointer transition-all  hover:bg-green-600 md:hover:bg-transparent md:hover:text-stone-900 w-full px-4 py-2">
+                        <a href="index.html"
+                            class="block text-xs md:text-sm lg:text-base text-stone-600 font-normal hover:text-white cursor-pointer transition-all  hover:bg-green-600 md:hover:bg-transparent md:hover:text-stone-900 w-full px-4 py-2">
                             Shop
                         </a>
                     </li>
 
                     <li class="w-full md:w-auto">
-                        <a href="index.html" class="block text-xs md:text-sm lg:text-base text-stone-600 font-normal hover:text-white cursor-pointer transition-all  hover:bg-green-600 md:hover:bg-transparent md:hover:text-stone-900 w-full px-4 py-2">
+                        <a href="index.html"
+                            class="block text-xs md:text-sm lg:text-base text-stone-600 font-normal hover:text-white cursor-pointer transition-all  hover:bg-green-600 md:hover:bg-transparent md:hover:text-stone-900 w-full px-4 py-2">
                             Contact
                         </a>
                     </li>
                 </ul>
 
                 <!-- contact button small devices-->
-                <button type="button" class="mt-3 flex md:hidden justify-center bg-green-600 p-2 px-4 w-full cursor-pointer hover:bg-green-800 rounded">
+                <button type="button"
+                    class="mt-3 flex md:hidden justify-center bg-green-600 p-2 px-4 w-full cursor-pointer hover:bg-green-800 rounded">
                     <!-- user svg -->
-                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="white" class="size-4">
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                        stroke="white" class="size-4">
                         <path stroke-linecap="round" stroke-linejoin="round"
                             d="M15.75 6a3.75 3.75 0 1 1-7.5 0 3.75 3.75 0 0 1 7.5 0ZM4.501 20.118a7.5 7.5 0 0 1 14.998 0A17.933 17.933 0 0 1 12 21.75c-2.676 0-5.216-.584-7.499-1.632Z" />
                     </svg>
@@ -64,32 +75,76 @@
             <!-- contact button -->
             <button type="button" class="md:flex justify-end hidden">
                 <!-- user svg -->
-                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" class="size-6 border border-stone-200 rounded-full p-1  stroke-stone-500">
-                    <path stroke-linecap="round" stroke-linejoin="round" d="M15.75 6a3.75 3.75 0 1 1-7.5 0 3.75 3.75 0 0 1 7.5 0ZM4.501 20.118a7.5 7.5 0 0 1 14.998 0A17.933 17.933 0 0 1 12 21.75c-2.676 0-5.216-.584-7.499-1.632Z" />
-                  </svg>
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                    class="size-6 border border-stone-200 rounded-full p-1  stroke-stone-500">
+                    <path stroke-linecap="round" stroke-linejoin="round"
+                        d="M15.75 6a3.75 3.75 0 1 1-7.5 0 3.75 3.75 0 0 1 7.5 0ZM4.501 20.118a7.5 7.5 0 0 1 14.998 0A17.933 17.933 0 0 1 12 21.75c-2.676 0-5.216-.584-7.499-1.632Z" />
+                </svg>
             </button>
         </nav>
     </header>
     <main class="mt-5 md:mt-0">
         <!-- banner -->
-        <section class="px-2 md:px-8 lg:px-12 text-center flex flex-col-reverse md:flex-col items-center">
+        <section
+            class="px-2 md:px-8 lg:px-12 text-center flex flex-col-reverse md:flex-col items-center mb-10 md:mb-15 lg:20">
             <!-- text section -->
             <div class="max-w-[752px] mx-auto flex flex-col items-center gap-3 md:gap-5 lg:gap_6">
                 <p class="font-bold text-stone-400 text-sm md:text-xl lg:text-2xl">Bringing Families Together ❤️‍🔥 </p>
                 <h2 class="text-3xl md:text-5xl lg:text-7xl font-bold">Your Path to Adoption Starts Here</h2>
-                <p class="text-xs md:text-sm lg:text-base text-stone-600">It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a.</p>
-                <button type="button" class="text-md md:text-xl font-bold text-white bg-[#0E7A81] px-4 py-3 md:px-8 md:py-4 rounded-xl hover:bg-[#33575a] w-fit">View More</button>
+                <p class="text-xs md:text-sm lg:text-base text-stone-600">It is a long established fact that a reader
+                    will be distracted by the readable content of a page when looking at its layout. The point of using
+                    Lorem Ipsum is that it has a.</p>
+                <button type="button"
+                    class="text-md md:text-xl font-bold text-white bg-[#0E7A81] px-4 py-3 md:px-8 md:py-4 rounded-xl hover:bg-[#33575a] w-fit">View
+                    More</button>
             </div>
             <!-- img section -->
-             <div class="mt-4 md:mt-8 lg:mt-12">
+            <div class="mt-4 md:mt-8 lg:mt-12">
                 <img src="src/assets/images/pet.webp" class="w-full" alt="banner images">
-             </div>
+            </div>
         </section>
-        
-        <!--  -->
+
+        <!-- category pets -->
+        <section class="px-2 md:px-8 lg:px-12 text-center">
+            <!-- text section -->
+            <div class="max-w-[636px] mx-auto">
+                <h2 class="font-bold text-2xl md:text-3xl lg:text-4xl">Adopt Your Best Friend</h2>
+                <p class="mt-3 md:mt-6 text-xs md:text-sm lg:text-base"> It is a long established fact that a reader
+                    will be distracted by the readable content of a page when looking at its layout. The point of using
+                    Lorem Ipsum is that it has a.</p>
+            </div>
+            <!-- category section -->
+            <div class="grid grid-cols-2 md:grid-cols-4 my-4 md:my-6 lg:my-8 gap-3 md:gap-4 lg:gap-6">
+                
+                <!-- items -->
+                <div class="flex justify-center gap-2 items-center border border-stone-200 p-2 rounded-md hover:bg-stone-100 cursor-pointer">
+                    <img src="src/assets/images/category img/shiba 1.png" class="w-7 lg:w-14" alt="dog image">
+                    <h6 class="font-bold text-base md:text-xl lg:text-2xl">Dogs</h6>
+                </div>
+
+                 <!-- items -->
+                 <div class="flex justify-center gap-2 items-center border border-stone-200 p-2 rounded-md hover:bg-stone-100 cursor-pointer">
+                    <img src="src/assets/images/category img/cat 1.png" class="w-7 lg:w-14" alt="dog image">
+                    <h6 class="font-bold text-base md:text-xl lg:text-2xl">Cats</h6>
+                </div>
+
+                <!-- items -->
+                <div class="flex justify-center gap-2 items-center border border-stone-200 p-2 rounded-md hover:bg-stone-100 cursor-pointer">
+                    <img src="src/assets/images/category img/rabbit 1.png" class="w-7 lg:w-14" alt="dog image">
+                    <h6 class="font-bold text-base md:text-xl lg:text-2xl">Rabbits</h6>
+                </div>
+
+                <!-- items -->
+                <div class="flex justify-center gap-2 items-center border border-stone-200 p-2 rounded-md hover:bg-stone-100 cursor-pointer">
+                    <img src="src/assets/images/category img/parrot 1.png" class="w-7 lg:w-14" alt="dog image">
+                    <h6 class="font-bold text-base md:text-xl lg:text-2xl">Birds</h6>
+                </div>
+            </div>
+        </section>
     </main>
     <footer></footer>
-    
+
     <script src="src/assets/js/main.js"></script>
 </body>
+
 </html>
