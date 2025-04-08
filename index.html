@@ -125,14 +125,13 @@
             <!-- sort items button section -->
             <div class="flex justify-between items-center">
                 <h4 class="text-base md:text-xl lg:text-2xl font-black">Best Deal For you</h4>
-                <button type="button"
-                    class="bg-[#0E7A81] rounded-md px-4 py-2 md:px-6 md:py-3 lg:px-8 lg:py-4 font-bold text-white">Sort
-                    by Price</button>
+                <button type="button" id="sortByPrice"
+                    class="bg-[#0E7A81] rounded-md px-4 py-2 md:px-6 md:py-3 lg:px-8 lg:py-4 font-bold text-white">Sort by Price</button>
             </div>
             <!-- Divided card section and selected items show section -->
             <div class="my-4 md:my-6 lg:my-8 grid grid-cols-10 gap-6">
                 <!-- loader -->
-                <div class="col-span-7 flex justify-center h-[200px]" id = "loader" >
+                <div class="col-span-10 md:col-span-7 flex justify-center h-[200px]" id = "loader" >
                     <span class="loading loading-bars loading-xs"></span>
                     <span class="loading loading-bars loading-sm"></span>
                     <span class="loading loading-bars loading-md"></span>
@@ -142,12 +141,14 @@
                
                 <!-- card section -->
                 <div id="petsData"
-                    class="col-span-10 md:col-span-7 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-3 md:gap-4 lg:gap-6">
+                    class="col-span-10 md:col-span-7 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-3 md:gap-4 lg:gap-6 h-fit">
                     <!-- data load Dynamically -->
                 </div>
                 <!-- items select section -->
-                <div class="col-span-10 md:col-span-3 rounded-xl overflow-hidden shadow-md" id="selectedItem">
-
+                <div class="col-span-10 md:col-span-3 rounded-xl shadow-md">
+                    <div class="grid grid-cols-2" id="selectedItem">
+                        
+                    </div>
                 </div>
             </div>
         </section>

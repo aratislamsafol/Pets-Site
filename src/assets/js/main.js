@@ -1,10 +1,39 @@
-const menuBtn = document.getElementById("menu-btn");
-const menuBar = document.getElementById('menuBar');
+const menuBtn = getElementById("menu-btn");
+const menuBar = getElementById('menuBar');
+const sortByPriceBtn = document.getElementById('sortByPrice');
 
 menuBtn.addEventListener("click", () => {
     menuBtn.classList.toggle("menu-active");
     menuBar.classList.toggle("show");
 });
+function showAllCategory(categoryDatas) {
+    const categoryItem = getElementById('categoryItem');
+    categoryDatas.forEach((data) =>
+        categoryItem.innerHTML += `
+        <button type="button"
+            class="category-item flex justify-center gap-2 items-center border border-stone-200 p-2 rounded-md hover:bg-stone-100 cursor-pointer" id="${data.category}">
+            <img src="${data.category_icon}" class="w-7 lg:w-14" alt="dog image">
+            <h6 class="font-bold text-base md:text-xl lg:text-2xl">${data.category}</h6>
+        </button>
+    `
+    )
+}
+
+function showCategoryData() {
+    const categoryItem = getElementById('categoryItem');
+    const loader = getElementById('loader');
+    categoryItem.addEventListener('click', (event) => {
+        const target = event.target.closest('.category-item');
+        if (!target) {
+            return;
+        };
+        loader.classList.remove('hidden');
+        loader.classList.add('flex');
+        petsData.innerHTML = '';
+
+        loadData(`https://openapi.programming-hero.com/api/peddy/category/${target.id}`, showAllPets);
+    })
+}
 
 // show All Pets Data
 function showAllPets(petsDatas) {
@@ -16,12 +45,11 @@ function showAllPets(petsDatas) {
     getElementById('selectedItem').classList.remove('hidden');
 
     if (petsDatas.length > 0) {
-        // যদি ডেটা থাকে, ২ সেকেন্ড লোড দেখিয়ে তারপর দেখাও
         setTimeout(() => {
             loader.classList.add('hidden');
             petsDatas.forEach(data => {
                 petsData.innerHTML += `
-                    <div class="rounded-xl overflow-hidden shadow-md p-2">
+                    <div class="rounded-xl overflow-hidden shadow-md p-2 h-fit">
                         <img class="w-full" src="${data.image}" alt="card image">
                         <div class="pt-6 pb-4 border-b-2 border-stone-100">
                             <div class="text-lg md:text-xl font-bold">${data.pet_name}</div>
@@ -50,9 +78,9 @@ function showAllPets(petsDatas) {
                                 </p>
                             </div>
                         </div>
-                        <div class="flex justify-between mt-4 mb-5">
-                            <div class="border-2 border-teal-100 hover:border-teal-200 cursor-pointer px-4 py-2 rounded-md flex items-center">
-                                <img src="src/assets/images/icons/Frame 1171276315.png" class="w-full" id="thumbnil" alt="thumbnil">
+                        <div class="parentSelectedItem flex justify-between mt-4 mb-5">
+                            <div class="border-2 border-teal-100 hover:border-teal-200 cursor-pointer px-4 py-2 rounded-md flex items-center" id="${data.petId}">
+                                <img src="src/assets/images/icons/Frame 1171276315.png" class="w-full" alt="thumbnil">
                             </div>
                             <div class="border-2 border-teal-100 hover:border-teal-200 cursor-pointer px-4 py-2 rounded-md text-teal-600 font-bold">
                                 Adopt
@@ -64,6 +92,7 @@ function showAllPets(petsDatas) {
                     </div>
                 `;
             });
+            likedData();
         }, 2000);
     } else {
         loader.classList.add('hidden');
@@ -79,34 +108,29 @@ function showAllPets(petsDatas) {
     }
 }
 
-function showAllCategory(categoryDatas) {
-    const categoryItem = getElementById('categoryItem');
-    categoryDatas.forEach((data)=> 
-        categoryItem.innerHTML += `
-        <button type="button"
-            class="category-item flex justify-center gap-2 items-center border border-stone-200 p-2 rounded-md hover:bg-stone-100 cursor-pointer" id="${data.category}">
-            <img src="${data.category_icon}" class="w-7 lg:w-14" alt="dog image">
-            <h6 class="font-bold text-base md:text-xl lg:text-2xl">${data.category}</h6>
-        </button>
-    `
-    ) 
+function likedData() {
+    const selectedItem = getElementById('selectedItem');
+    const parentCardFooter = document.getElementsByClassName('parentSelectedItem');
+
+    for (let data of parentCardFooter) {
+        const img = data.parentElement.querySelector('img'); 
+
+        data.children[0].addEventListener('click', () => {
+            const clonedImg = img.cloneNode(true); 
+            clonedImg.classList.add('cloned-img'); 
+            selectedItem.appendChild(clonedImg);  
+        });
+    }
 }
 
-function showCategoryData() {
-    const categoryItem = getElementById('categoryItem');
-    const loader = getElementById('loader');
-    categoryItem.addEventListener('click', (event)=>{
-        const target = event.target.closest('.category-item');
-        if (!target) {
-            return;
-        };
-        loader.classList.remove('hidden');
-        loader.classList.add('flex');
-        petsData.innerHTML = '';
-       
-        loadData(`https://openapi.programming-hero.com/api/peddy/category/${target.id}`, showAllPets);
-    })
+function sortByPrice(datas) {
+    const data = [...datas].sort((a, b) => b.price - a.price);
+    showAllPets(data);
 }
+
+sortByPriceBtn.addEventListener('click', () => {
+    loadData('https://openapi.programming-hero.com/api/peddy/pets', sortByPrice)
+})
 
 loadData('https://openapi.programming-hero.com/api/peddy/pets', showAllPets);
 loadData('https://openapi.programming-hero.com/api/peddy/categories', showAllCategory);

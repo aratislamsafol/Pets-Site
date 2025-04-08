@@ -1,4 +1,4 @@
-@import "tailwindcss";
+
 .regular-font {
     font-family: "Lato", sans-serif;
 }
@@ -21,4 +21,8 @@
 /* menubar */
 .show{
     display: block;
+}
+.cloned-img{
+    padding: 4px;
+    border-radius: 10px;
 }

@@ -9,5 +9,5 @@ function getElementById(id) {
 }
 
 function getElementByClassName(className) {
-    return document.getElementByClassName(className);
+    return document.getElementsByClassName(className);
 }
