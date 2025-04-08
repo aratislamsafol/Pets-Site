@@ -12,6 +12,7 @@
         rel="stylesheet">
     <!-- DaisyUI & Tailwind CSS -->
     <link href="https://cdn.jsdelivr.net/npm/daisyui@5" rel="stylesheet" type="text/css" />
+
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
     <!-- custom css -->
     <link rel="stylesheet" href="src/input.css">
@@ -73,7 +74,7 @@
             </div>
 
             <!-- contact button -->
-            <button type="button" class="md:flex justify-end hidden" onclick="my_modal_5.showModal()">
+            <button type="button" class="md:flex justify-end hidden cursor-pointer" onclick="my_modal_5.showModal()">
                 <!-- user svg -->
                 <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
                     class="size-10 border border-stone-200 rounded-full p-2  stroke-stone-500">
@@ -114,35 +115,8 @@
                     Lorem Ipsum is that it has a.</p>
             </div>
             <!-- category section -->
-            <div class="grid grid-cols-2 md:grid-cols-4 my-4 md:my-6 lg:my-8 gap-3 md:gap-4 lg:gap-6">
+            <div class="grid grid-cols-2 md:grid-cols-4 my-4 md:my-6 lg:my-8 gap-3 md:gap-4 lg:gap-6" id="categoryItem">
 
-                <!-- items -->
-                <div
-                    class="flex justify-center gap-2 items-center border border-stone-200 p-2 rounded-md hover:bg-stone-100 cursor-pointer">
-                    <img src="src/assets/images/category img/shiba 1.png" class="w-7 lg:w-14" alt="dog image">
-                    <h6 class="font-bold text-base md:text-xl lg:text-2xl">Dogs</h6>
-                </div>
-
-                <!-- items -->
-                <div
-                    class="flex justify-center gap-2 items-center border border-stone-200 p-2 rounded-md hover:bg-stone-100 cursor-pointer">
-                    <img src="src/assets/images/category img/cat 1.png" class="w-7 lg:w-14" alt="dog image">
-                    <h6 class="font-bold text-base md:text-xl lg:text-2xl">Cats</h6>
-                </div>
-
-                <!-- items -->
-                <div
-                    class="flex justify-center gap-2 items-center border border-stone-200 p-2 rounded-md hover:bg-stone-100 cursor-pointer">
-                    <img src="src/assets/images/category img/rabbit 1.png" class="w-7 lg:w-14" alt="dog image">
-                    <h6 class="font-bold text-base md:text-xl lg:text-2xl">Rabbits</h6>
-                </div>
-
-                <!-- items -->
-                <div
-                    class="flex justify-center gap-2 items-center border border-stone-200 p-2 rounded-md hover:bg-stone-100 cursor-pointer">
-                    <img src="src/assets/images/category img/parrot 1.png" class="w-7 lg:w-14" alt="dog image">
-                    <h6 class="font-bold text-base md:text-xl lg:text-2xl">Birds</h6>
-                </div>
             </div>
         </section>
 
@@ -158,218 +132,12 @@
             <!-- Divided card section and selected items show section -->
             <div class="my-4 md:my-6 lg:my-8 grid grid-cols-10 gap-6">
                 <!-- card section -->
-                <div
-                    class="col-span-10 md:col-span-7 grid grid-cols-1 md:grid-cols-2  lg:grid-cols-3 gap-3 md:gap-4 lg:gap-6">
-                    <!-- card -->
-                    <div class="rounded-xl overflow-hidden shadow-md p-2">
-                        <!-- card img -->
-                        <img class="w-full" src="src/assets/images/pets items/Rectangle 1.png" alt="card image">
-                        <!-- card body -->
-                        <div class="pt-6 pb-4 border-b-2 border-stone-100">
-                            <div class="text-lg md:text-xl font-bold">Mister Tartosh</div>
-                            <div class="flex gap-1 items-center mt-2">
-                                <img src="src/assets/images/icons/Frame.png" class="w-5 h-5" alt="">
-                                <p class="text-gray-700 text-base">
-                                    Breed: Golder retriever
-                                </p>
-                            </div>
-
-                            <div class="flex gap-1 items-center mt-2">
-                                <img src="src/assets/images/icons/Frame-1.png" class="w-5 h-5" alt="">
-                                <p class="text-gray-700 text-base">
-                                    Birth: 2024
-                                </p>
-                            </div>
-                            <div class="flex gap-1 items-center mt-2">
-                                <img src="src/assets/images/icons/Frame-2.png" class="w-5 h-5" alt="">
-                                <p class="text-gray-700 text-base">
-                                    Gender: Female
-                                </p>
-                            </div>
-                            <div class="flex gap-1 items-center mt-2">
-                                <img src="src/assets/images/icons/Frame-3.png" class="w-5 h-5" alt="">
-                                <p class="text-gray-700 text-base">
-                                    Price : 199$
-                                </p>
-                            </div>
-                        </div>
-
-                        <!-- card footer -->
-                        <div class="flex justify-between mt-4 mb-5">
-                            <div
-                                class="border-2 border-teal-100 hover:border-teal-200 cursor-pointer px-4 py-2 rounded-md flex items-center">
-                                <img src="src/assets/images/icons/Frame 1171276315.png" class="w-full" id="thumbnil"
-                                    alt="thumbnil">
-                            </div>
-                            <div
-                                class="border-2 border-teal-100 hover:border-teal-200 cursor-pointer px-4 py-2 rounded-md text-teal-600 font-bold">
-                                Adopt
-                            </div>
-                            <div
-                                class="border-2 border-teal-100 hover:border-teal-200 cursor-pointer px-4 py-2 rounded-md text-teal-600 font-bold">
-                                Details
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- card -->
-                    <div class="rounded-xl overflow-hidden shadow-md p-2">
-                        <!-- card img -->
-                        <img class="w-full" src="src/assets/images/pets items/Rectangle 1.png" alt="card image">
-                        <!-- card body -->
-                        <div class="pt-6 pb-4 border-b-2 border-stone-100">
-                            <div class="text-lg md:text-xl font-bold">Mister Tartosh</div>
-                            <div class="flex gap-1 items-center mt-2">
-                                <img src="src/assets/images/icons/Frame.png" class="w-5 h-5" alt="">
-                                <p class="text-gray-700 text-base">
-                                    Breed: Golder retriever
-                                </p>
-                            </div>
-
-                            <div class="flex gap-1 items-center mt-2">
-                                <img src="src/assets/images/icons/Frame-1.png" class="w-5 h-5" alt="">
-                                <p class="text-gray-700 text-base">
-                                    Birth: 2024
-                                </p>
-                            </div>
-                            <div class="flex gap-1 items-center mt-2">
-                                <img src="src/assets/images/icons/Frame-2.png" class="w-5 h-5" alt="">
-                                <p class="text-gray-700 text-base">
-                                    Gender: Female
-                                </p>
-                            </div>
-                            <div class="flex gap-1 items-center mt-2">
-                                <img src="src/assets/images/icons/Frame-3.png" class="w-5 h-5" alt="">
-                                <p class="text-gray-700 text-base">
-                                    Price : 199$
-                                </p>
-                            </div>
-                        </div>
-
-                        <!-- card footer -->
-                        <div class="flex justify-between mt-4 mb-5">
-                            <div
-                                class="border-2 border-teal-100 hover:border-teal-200 cursor-pointer px-4 py-2 rounded-md flex items-center">
-                                <img src="src/assets/images/icons/Frame 1171276315.png" class="w-full" id="thumbnil"
-                                    alt="thumbnil">
-                            </div>
-                            <div
-                                class="border-2 border-teal-100 hover:border-teal-200 cursor-pointer px-4 py-2 rounded-md text-teal-600 font-bold">
-                                Adopt
-                            </div>
-                            <div
-                                class="border-2 border-teal-100 hover:border-teal-200 cursor-pointer px-4 py-2 rounded-md text-teal-600 font-bold">
-                                Details
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- card -->
-                    <div class="rounded-xl overflow-hidden shadow-md p-2">
-                        <!-- card img -->
-                        <img class="w-full" src="src/assets/images/pets items/Rectangle 1.png" alt="card image">
-                        <!-- card body -->
-                        <div class="pt-6 pb-4 border-b-2 border-stone-100">
-                            <div class="text-lg md:text-xl font-bold">Mister Tartosh</div>
-                            <div class="flex gap-1 items-center mt-2">
-                                <img src="src/assets/images/icons/Frame.png" class="w-5 h-5" alt="">
-                                <p class="text-gray-700 text-base">
-                                    Breed: Golder retriever
-                                </p>
-                            </div>
-
-                            <div class="flex gap-1 items-center mt-2">
-                                <img src="src/assets/images/icons/Frame-1.png" class="w-5 h-5" alt="">
-                                <p class="text-gray-700 text-base">
-                                    Birth: 2024
-                                </p>
-                            </div>
-                            <div class="flex gap-1 items-center mt-2">
-                                <img src="src/assets/images/icons/Frame-2.png" class="w-5 h-5" alt="">
-                                <p class="text-gray-700 text-base">
-                                    Gender: Female
-                                </p>
-                            </div>
-                            <div class="flex gap-1 items-center mt-2">
-                                <img src="src/assets/images/icons/Frame-3.png" class="w-5 h-5" alt="">
-                                <p class="text-gray-700 text-base">
-                                    Price : 199$
-                                </p>
-                            </div>
-                        </div>
-
-                        <!-- card footer -->
-                        <div class="flex justify-between mt-4 mb-5">
-                            <div
-                                class="border-2 border-teal-100 hover:border-teal-200 cursor-pointer px-4 py-2 rounded-md flex items-center">
-                                <img src="src/assets/images/icons/Frame 1171276315.png" class="w-full" id="thumbnil"
-                                    alt="thumbnil">
-                            </div>
-                            <div
-                                class="border-2 border-teal-100 hover:border-teal-200 cursor-pointer px-4 py-2 rounded-md text-teal-600 font-bold">
-                                Adopt
-                            </div>
-                            <div
-                                class="border-2 border-teal-100 hover:border-teal-200 cursor-pointer px-4 py-2 rounded-md text-teal-600 font-bold">
-                                Details
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- card -->
-                    <div class="rounded-xl overflow-hidden shadow-md p-2">
-                        <!-- card img -->
-                        <img class="w-full" src="src/assets/images/pets items/Rectangle 1.png" alt="card image">
-                        <!-- card body -->
-                        <div class="pt-6 pb-4 border-b-2 border-stone-100">
-                            <div class="text-lg md:text-xl font-bold">Mister Tartosh</div>
-                            <div class="flex gap-1 items-center mt-2">
-                                <img src="src/assets/images/icons/Frame.png" class="w-5 h-5" alt="">
-                                <p class="text-gray-700 text-base">
-                                    Breed: Golder retriever
-                                </p>
-                            </div>
-
-                            <div class="flex gap-1 items-center mt-2">
-                                <img src="src/assets/images/icons/Frame-1.png" class="w-5 h-5" alt="">
-                                <p class="text-gray-700 text-base">
-                                    Birth: 2024
-                                </p>
-                            </div>
-                            <div class="flex gap-1 items-center mt-2">
-                                <img src="src/assets/images/icons/Frame-2.png" class="w-5 h-5" alt="">
-                                <p class="text-gray-700 text-base">
-                                    Gender: Female
-                                </p>
-                            </div>
-                            <div class="flex gap-1 items-center mt-2">
-                                <img src="src/assets/images/icons/Frame-3.png" class="w-5 h-5" alt="">
-                                <p class="text-gray-700 text-base">
-                                    Price : 199$
-                                </p>
-                            </div>
-                        </div>
-
-                        <!-- card footer -->
-                        <div class="flex justify-between mt-4 mb-5">
-                            <div
-                                class="border-2 border-teal-100 hover:border-teal-200 cursor-pointer px-4 py-2 rounded-md flex items-center">
-                                <img src="src/assets/images/icons/Frame 1171276315.png" class="w-full" id="thumbnil"
-                                    alt="thumbnil">
-                            </div>
-                            <div
-                                class="border-2 border-teal-100 hover:border-teal-200 cursor-pointer px-4 py-2 rounded-md text-teal-600 font-bold">
-                                Adopt
-                            </div>
-                            <div
-                                class="border-2 border-teal-100 hover:border-teal-200 cursor-pointer px-4 py-2 rounded-md text-teal-600 font-bold">
-                                Details
-                            </div>
-                        </div>
-                    </div>
+                <div id="petsData"
+                    class="col-span-10 md:col-span-7 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-3 md:gap-4 lg:gap-6">
+                    <!-- data load Dynamically -->
                 </div>
                 <!-- items select section -->
-                <div class="col-span-10 md:col-span-3 rounded-xl overflow-hidden shadow-md">
+                <div class="col-span-10 md:col-span-3 rounded-xl overflow-hidden shadow-md" id="selectedItem">
 
                 </div>
             </div>
@@ -435,7 +203,7 @@
           </div>
         </div>
       </dialog>
-
+    <script src="src/assets/js/utlities/utilities.js"></script>
     <script src="src/assets/js/main.js"></script>
 </body>
 
